@@ -5,3 +5,5 @@ const server = require('./server')
 module.exports.server = sls(server, {
   binary: binaryMimeTypes
 })
+
+

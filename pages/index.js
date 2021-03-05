@@ -1,17 +1,25 @@
 import React from 'react'
 import Default from '../layouts/default'
 import axios from 'axios'
-const meta = { title: 'Index title', description: 'Index description' }
 
 class IndexPage extends React.Component {
+  static async getInitialProps(ctx) {
+    const { data } = await axios.get(
+      'https://api.thedogapi.com/v1/images/search?limit=1'
+    )
+    return {image: data[0].url};
+  }
+
   constructor (props) {
     super(props)
     this.state = {
       loading: true,
+      meta: {}, 
       dog: {}
     }
     this.fetchData = this.fetchData.bind(this)
   }
+ 
   async componentDidMount () {
     await this.fetchData()
   }
@@ -25,7 +33,9 @@ class IndexPage extends React.Component {
       loading: false
     })
   }
+
   render () {
+    let meta = { title: 'This is news', description: 'News description', pic: this.props.image };
     return (
       <Default meta={meta}>
         <div>

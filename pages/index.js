@@ -3,11 +3,11 @@ import Default from '../layouts/default'
 import axios from 'axios'
 
 class IndexPage extends React.Component {
-  static async getInitialProps(ctx) {
+  static async getInitialProps({ query: { newsId } }) {
     const { data } = await axios.get(
       'https://api.thedogapi.com/v1/images/search?limit=1'
     )
-    return {image: data[0].url};
+    return {image: newsId};
   }
 
   constructor (props) {

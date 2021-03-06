@@ -4,10 +4,14 @@ import axios from 'axios'
 
 class IndexPage extends React.Component {
   static async getInitialProps({ query: { newsId } }) {
+
     const { data } = await axios.get(
-      'https://api.thedogapi.com/v1/images/search?limit=1'
+      'https://api.shapla.app/singlenews?id=' + newsId
     )
-    return {image: newsId};
+
+    let image = (data['news'])[0].pic;
+
+    return {image: image};
   }
 
   constructor (props) {

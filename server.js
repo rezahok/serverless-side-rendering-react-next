@@ -10,6 +10,7 @@ const { parse } = require('url')
 const server = express()
 const route = pathMatch()
 server.use('/_next', express.static(path.join(__dirname, '.next')))
+
 server.get('/', (req, res) => {
   return app.render(req, res, '/', req.query)
 })

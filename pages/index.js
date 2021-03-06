@@ -9,9 +9,9 @@ class IndexPage extends React.Component {
       'https://api.shapla.app/singlenews?id=' + newsId
     )
 
-    let image = (data['news'])[0].pic;
+    let newsItem = (data['news'])[0];
 
-    return {image: image};
+    return {newsItem: newsItem};
   }
 
   constructor (props) {
@@ -39,7 +39,11 @@ class IndexPage extends React.Component {
   }
 
   render () {
-    let meta = { title: 'This is news', description: 'News description', pic: this.props.image };
+    let meta = { title: this.props.newsItem.title, 
+                 description: this.props.newsItem.first_paragraph, 
+                 pic: this.props.newsItem.pic 
+                };
+
     return (
       <Default meta={meta}>
         <div>

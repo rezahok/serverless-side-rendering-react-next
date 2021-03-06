@@ -2,7 +2,7 @@ import React from 'react'
 import Default from '../layouts/default'
 import axios from 'axios'
 
-class IndexPage extends React.Component {
+class NewsDetailsPage extends React.Component {
   static async getInitialProps({ query: { newsId } }) {
 
     const { data } = await axios.get(
@@ -27,13 +27,15 @@ class IndexPage extends React.Component {
   async componentDidMount () {
     await this.fetchData()
   }
+
   async fetchData () {
     this.setState({ loading: true })
     const { data } = await axios.get(
-      'https://api.thedogapi.com/v1/images/search?limit=1'
+      'https://api.shapla.app/singlenews?id=' + newsId
     )
+
     this.setState({
-      dog: data[0],
+      newsItem: (data['news'])[0],
       loading: false
     })
   }
@@ -47,13 +49,11 @@ class IndexPage extends React.Component {
     return (
       <Default meta={meta}>
         <div>
-          <h1>This is the Front Page.</h1>
-          <h3>Random dog of the day:</h3>
-          <img src={this.state.dog.url} alt='' />
+          <img src={this.state.newsItem.pic} alt='' />
         </div>
       </Default>
     )
   }
 }
 
-export default IndexPage
+export default NewsDetailsPage

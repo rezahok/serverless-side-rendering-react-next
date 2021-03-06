@@ -14,11 +14,11 @@ server.use('/_next', express.static(path.join(__dirname, '.next')))
 server.get('/', (req, res) => {
   return app.render(req, res, '/', req.query)
 })
-server.get('/dogs', (req, res) => app.render(req, res, '/dogs'))
-server.get('/dogs/:breed', (req, res) => {
-  const params = route('/dogs/:breed')(parse(req.url).pathname)
-  return app.render(req, res, '/dogs/_breed', params)
-})
+// server.get('/dogs', (req, res) => app.render(req, res, '/dogs'))
+// server.get('/dogs/:breed', (req, res) => {
+//   const params = route('/dogs/:breed')(parse(req.url).pathname)
+//   return app.render(req, res, '/dogs/_breed', params)
+// })
 server.get('*', (req, res) => handle(req, res))
 
 module.exports = server

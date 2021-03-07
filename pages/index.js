@@ -21,8 +21,7 @@ class IndexPage extends React.Component {
       loading: true
     }
   }
- 
-  
+
   render () {
     let meta = { title: this.props.newsItem.title, 
                  description: this.props.newsItem.first_paragraph, 
@@ -31,10 +30,60 @@ class IndexPage extends React.Component {
 
     return (
       <Default meta={meta}>
-        <div className="newsText">
-          Come on Reza we can do it.
-          <img src={this.props.newsItem.pic} alt='' />
+
+        <div className="container">
+          <div className="logoContainer">
+            <img src="/images/logo_grey.png" className="logo" />
+            <p className="title">
+              শাপলা নিউজ রিডার
+              </p>
+          </div>
+
+          <div className="newsBody">
+              <div className="titleDeco">
+                  <h1 className="newsheader">{this.props.newsItem.title}</h1>
+                  <h1 className="metadata">{this.props.newsItem.news_source}  •  {this.props.newsItem.category}</h1>
+              </div>
+
+              <div className="dsiplay-linebreak">
+                  <p className="newsText">
+                    {this.props.newsItem.first_paragraph}
+                  </p>
+
+                  <div className="dsiplay-linebreak">
+                    <img src={this.props.newsItem.pic} className="bodyImg" />         
+                            
+                    <p className="newsText">
+                      {this.props.newsItem.news_details}
+                    </p>
+                  </div>                  
+              </div>
+
+              <div className="sourcecontainer">
+                  <a className="source" href={this.props.newsItem.source_url} target="blank">
+                    {this.props.newsItem.news_source}
+                  </a>
+                  <div className="news_date"> {this.props.newsItem.published_date}</div>
+              </div>
+          </div>
+
+          <div className="footer">
+            <p className="message">
+              আপনি শাপলা নিউজ রিডার অ্যাপটির দ্বারা শেয়ার করা ওয়েবে একটি নিউজ আর্টিকেল পড়ছেন।
+              <br />   <br />
+              আরও ভাল সংবাদ পড়ার অভিজ্ঞতার জন্য শাপলা অ্যাপটি ডাউনলোড করুন।
+              </p>
+
+            {/* <a href="https://play.google.com/store/apps/details?id=com.rongpencil.shapla">
+              <img src={android} className="download_btn" />
+            </a>
+
+            <a href="https://apps.apple.com/ca/app/shapla-bangla-news-reader/id1540395773">
+              <img src={ios} className="download_btn" />
+            </a> */}
+            </div>
         </div>
+
       </Default>
     )
   }

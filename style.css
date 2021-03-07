@@ -48,11 +48,11 @@
  
 @font-face {
   font-family: SFProText-Regular;
-  src: local(SFProText-Regular), url(./assets/fonts/SFProText-Regular.ttf) format('truetype');
+  src: local(SFProText-Regular), url(/fonts/SFProText-Regular.ttf) format('truetype');
 }
 @font-face {
   font-family: SFProText-Light;
-  src: local(SFProText-Light), url(./assets/fonts/SFProText-Light.ttf) format('truetype');
+  src: local(SFProText-Light), url(/fonts/SFProText-Light.ttf) format('truetype');
 }
 
 

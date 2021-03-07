@@ -12,6 +12,7 @@
   "author": "Adnan Rahić",
   "license": "MIT",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "axios": "^0.21.1",
     "express": "^4.17.1",
     "next": "^7.0.3",

@@ -5,7 +5,7 @@ export default ({ props = { title, description, pic } }) => (
 
       {/* General tags */}
       <title>Shapla Reader</title>
-      <meta charset="utf-8" />
+      <meta charSet="utf-8" />
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <meta name="description" content={props.description || ''} />
       <meta name="image" content={props.pic} />                    

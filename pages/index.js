@@ -1,6 +1,7 @@
 import React from 'react'
 import Default from '../layouts/default'
 import axios from 'axios'
+import '../style.css';
 
 class IndexPage extends React.Component {
   static async getInitialProps({ query: { newsId } }) {
@@ -21,7 +22,7 @@ class IndexPage extends React.Component {
     }
   }
  
- 
+  
   render () {
     let meta = { title: this.props.newsItem.title, 
                  description: this.props.newsItem.first_paragraph, 
@@ -30,8 +31,8 @@ class IndexPage extends React.Component {
 
     return (
       <Default meta={meta}>
-        <div>
-          <h1>Reza is here for the previews.</h1>
+        <div className="newsText">
+          Come on Reza we can do it.
           <img src={this.props.newsItem.pic} alt='' />
         </div>
       </Default>

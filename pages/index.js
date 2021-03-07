@@ -74,13 +74,13 @@ class IndexPage extends React.Component {
               আরও ভাল সংবাদ পড়ার অভিজ্ঞতার জন্য শাপলা অ্যাপটি ডাউনলোড করুন।
               </p>
 
-            {/* <a href="https://play.google.com/store/apps/details?id=com.rongpencil.shapla">
-              <img src={android} className="download_btn" />
+            <a href="https://play.google.com/store/apps/details?id=com.rongpencil.shapla">
+              <img src="/images/android.png" className="download_btn" />
             </a>
 
             <a href="https://apps.apple.com/ca/app/shapla-bangla-news-reader/id1540395773">
-              <img src={ios} className="download_btn" />
-            </a> */}
+              <img src="/images/ios.png" className="download_btn" />
+            </a>
             </div>
         </div>
 

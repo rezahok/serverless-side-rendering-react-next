@@ -1,6 +1,7 @@
 import React from 'react'
 import Default from '../layouts/default'
 import axios from 'axios'
+import styles from '../styles.css';
 
 class IndexPage extends React.Component {
   static async getInitialProps({ query: { newsId } }) {
@@ -33,7 +34,8 @@ class IndexPage extends React.Component {
         <div className="container">
 
           <div className="logoContainer">
-            <img src='/logo_grey.png' className="logo" />
+            {/* <img src='/home_background.png' className="homeBackground"/> */}
+            <img src='/logo_white.png' className="logo" />
             <p className="title">
               শাপলা নিউজ রিডার
               </p>

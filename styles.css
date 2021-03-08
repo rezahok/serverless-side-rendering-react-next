@@ -70,14 +70,6 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    ;
-  }
-  
-  .homeBackground {
-    position: relative;
-    top: -50px;
-    left: 0;
-    border: 1px red solid;
   }
 
   .logo {
@@ -93,7 +85,6 @@
     font-size: 18px;
     color: white;
     font-family: SFProText-Light;
-    align-self: center;    
   }
   
   .container {

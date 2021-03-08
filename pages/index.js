@@ -34,8 +34,7 @@ class IndexPage extends React.Component {
         <div className="container">
 
           <div className="logoContainer">
-            {/* <img src='/home_background.png' className="homeBackground"/> */}
-            <img src='/logo_white.png' className="logo" />
+            <img src='/logo_white.webp' className="logo" />
             <p className="title">
               শাপলা নিউজ রিডার
               </p>
@@ -77,11 +76,11 @@ class IndexPage extends React.Component {
               </p>
 
             <a href="https://play.google.com/store/apps/details?id=com.rongpencil.shapla">
-              <img src='/android.png' className="download_btn" />
+              <img src='/android.webp' className="download_btn" />
             </a>
 
             <a href="https://apps.apple.com/ca/app/shapla-bangla-news-reader/id1540395773">
-              <img src="/ios.png" className="download_btn" />
+              <img src="/ios.webp" className="download_btn" />
             </a>
             </div>
         </div>

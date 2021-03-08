@@ -39,21 +39,22 @@
   }
 }
 
-@font-face {
-  font-family: "SFProText-Regular";
+/* @font-face {
+  font-family: SFProText-Regular;
   src: local(SFProText-Regular), url(/fonts/SFProText-Regular.ttf) format('truetype');
 }
 @font-face {
-  font-family: "SFProText-Light";
+  font-family: SFProText-Light;
   src: local(SFProText-Light), url(/fonts/SFProText-Light.ttf) format('truetype');
 }
+*/
 
 .dsiplay-linebreak{
     white-space: pre-line;
   } 
   
   body {
-    background-image: url("/web_bg.webp"); 
+    background-image: url("/web_bg.png"); 
     background-color:white;
     align-content: center;
     margin: auto;
@@ -87,7 +88,7 @@
   }
   
   .container {
-    background-image: url("/home_background.webp");
+    background-image: url("/home_background.png");
     background-repeat: no-repeat;
     background-size: contain;
     overflow: hidden;

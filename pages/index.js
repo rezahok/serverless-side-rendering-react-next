@@ -1,7 +1,6 @@
 import React from 'react'
 import Default from '../layouts/default'
 import axios from 'axios'
-import '../style.css';
 
 class IndexPage extends React.Component {
   static async getInitialProps({ query: { newsId } }) {
@@ -32,8 +31,9 @@ class IndexPage extends React.Component {
       <Default meta={meta}>
 
         <div className="container">
+
           <div className="logoContainer">
-            <img src="/images/logo_grey.png" className="logo" />
+            <img src='/logo_grey.png' className="logo" />
             <p className="title">
               শাপলা নিউজ রিডার
               </p>
@@ -56,10 +56,10 @@ class IndexPage extends React.Component {
                     <p className="newsText">
                       {this.props.newsItem.news_details}
                     </p>
-                  </div>                  
+                  </div>
               </div>
 
-              <div className="sourcecontainer">
+              <div className="sourcecontainer"> 
                   <a className="source" href={this.props.newsItem.source_url} target="blank">
                     {this.props.newsItem.news_source}
                   </a>
@@ -75,11 +75,11 @@ class IndexPage extends React.Component {
               </p>
 
             <a href="https://play.google.com/store/apps/details?id=com.rongpencil.shapla">
-              <img src="/images/android.png" className="download_btn" />
+              <img src='/android.png' className="download_btn" />
             </a>
 
             <a href="https://apps.apple.com/ca/app/shapla-bangla-news-reader/id1540395773">
-              <img src="/images/ios.png" className="download_btn" />
+              <img src="/ios.png" className="download_btn" />
             </a>
             </div>
         </div>

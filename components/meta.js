@@ -1,4 +1,5 @@
 import Head from 'next/head'
+
 export default ({ props = { title, description, pic } }) => (
   <div>
     <Head>
@@ -6,7 +7,7 @@ export default ({ props = { title, description, pic } }) => (
       {/* General tags */}
       <title>Shapla Reader</title>
       <meta charSet="utf-8" />
-      <meta name='viewport' content='width=device-width, initial-scale=1' />
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <meta name="description" content={props.description || ''} />
       <meta name="image" content={props.pic} />                    
 
